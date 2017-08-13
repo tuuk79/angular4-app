@@ -6,9 +6,14 @@ describe('login service', () => {
 		expect(loginService).not.toBe(null);
 	});
 
-	it('should login successfully', () => {
+	it('should return a login response', () => {
+		const user = {
+			username: 'steve',
+			password: 'somepassword'
+		};
+
 		const loginService = new LoginService();
-		const response = loginService.getHello();
-		expect(response).toBe('hello');
+		const response = loginService.authenticate();
+		expect(response).not.toBe(null);
 	});
 });
