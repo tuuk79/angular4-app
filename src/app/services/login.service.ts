@@ -1,8 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Component } from '@angular/core';
 
-@Injectable()
+@Component({
+	selector: 'login-service',
+	templateUrl: './login.service.html',
+	styleUrls: ['./login.service.css']
+})
+
 export class LoginService {
-	authenticate(): boolean {
-		return true;
+	authenticate(){
+    return true;
 	}
 }
