@@ -1,4 +1,5 @@
 import { LoginService } from './login.service';
+import { User } from '../models/user';
 
 describe('login service', () => {
 	it('should get created', () => {
@@ -7,13 +8,13 @@ describe('login service', () => {
 	});
 
 	it('should return a login response', () => {
-		const user = {
+		const user: User = {
 			username: 'steve',
 			password: 'somepassword'
 		};
 
 		const loginService = new LoginService();
-		const response = loginService.authenticate();
+		const response = loginService.authenticate(user);
 		expect(response).not.toBe(null);
 	});
 });
