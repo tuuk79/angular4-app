@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
@@ -10,17 +11,21 @@ import 'hammerjs';
 import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ShoppingComponent } from './shopping/shopping.component';
+import { AdminComponent } from './admin/admin.component';
+
 
 const appRoutes: Routes = [
 	{ path: '', component: LoginComponent },
-	{ path: 'shopping', component: ShoppingComponent }
+	{ path: 'shopping', component: ShoppingComponent },
+	{ path: 'admin', component: AdminComponent }
 ];
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		LoginComponent,
-		ShoppingComponent
+		ShoppingComponent,
+		AdminComponent
 	],
 	imports: [
 		BrowserModule,
@@ -28,8 +33,9 @@ const appRoutes: Routes = [
 		MdButtonModule,
 		MdCheckboxModule,
 		FlexLayoutModule,
+		FormsModule,
 		RouterModule.forRoot(
-			appRoutes,
+			appRoutes
 			// { enableTracing: true } // <-- debugging purposes only
 		)
 	],

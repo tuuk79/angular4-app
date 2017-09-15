@@ -17,4 +17,8 @@ export class LoginComponent implements OnInit {
 		this.router.navigateByUrl('/shopping');
 	}
 
+	goToAdminPanel() {
+		this.router.navigateByUrl('/admin');
+	}
+
 }

@@ -25,4 +25,12 @@ describe('angular4-app App', () => {
 		const passwordTextbox = element(by.id('password'));
 		expect(passwordTextbox).not.toBe(null);
 	});
+
+	it('should navigate to shopping page when logging into app successfully', () => {
+		page.navigateTo();
+		const loginButton = element(by.id('login-button'));
+		loginButton.click();
+		const shoppingWorksText = element(by.css('p'));
+		expect(shoppingWorksText.getText()).toBe('shopping works!');
+	});
 });
