@@ -12,10 +12,11 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { AdminComponent } from './admin/admin.component';
-
+import { ProductsComponent } from './products/products.component';
 
 const appRoutes: Routes = [
 	{ path: '', component: LoginComponent },
+	{ path: 'products', component: ProductsComponent },
 	{ path: 'shopping', component: ShoppingComponent },
 	{ path: 'admin', component: AdminComponent }
 ];
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
 		AppComponent,
 		LoginComponent,
 		ShoppingComponent,
-		AdminComponent
+		AdminComponent,
+		ProductsComponent
 	],
 	imports: [
 		BrowserModule,
